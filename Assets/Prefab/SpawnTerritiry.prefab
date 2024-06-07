@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &909107850281296639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2403161127638811694}
+  - component: {fileID: 4965605417080062825}
+  - component: {fileID: 7376695715854187189}
+  - component: {fileID: 8178555841018894283}
+  - component: {fileID: 3421432803618264009}
+  - component: {fileID: 688028722945607777}
+  m_Layer: 0
+  m_Name: SpawnTerritiry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2403161127638811694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909107850281296639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 22, y: 0.5, z: 22}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4965605417080062825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909107850281296639}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7376695715854187189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909107850281296639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d157491a40f2a4b9b98521f385e5f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8178555841018894283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909107850281296639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5aafa31ac13fc46ac89b2cc01a44d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnTerritory: {fileID: 4965605417080062825}
+  _cubes: {fileID: 7376695715854187189}
+  _prefabCube: {fileID: 5872030338900523337, guid: b780352042526e34182afa0209229ad1, type: 3}
+  _prefabStartScale: {x: 5, y: 5, z: 5}
+  _explosion: {fileID: 3421432803618264009}
+  _chanceCounter: {fileID: 688028722945607777}
+  _materials:
+  - {fileID: 2100000, guid: b8fdb9161e683204ea02266cc866bb12, type: 2}
+  - {fileID: 2100000, guid: 100b5e1faee944747a7e7364d1dff565, type: 2}
+  - {fileID: 2100000, guid: 81d9e52396cb1824da1e08fff4f4ae1d, type: 2}
+  _clickHandler: {fileID: 0}
+  _minCountCubes: 2
+  _maxCountCubes: 6
+  _splitterCube: 2
+--- !u!114 &3421432803618264009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909107850281296639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77de22002ac0acc4ea8921686ca96eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radiusExplosion: 2
+  _forceExplsion: 5
+--- !u!114 &688028722945607777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909107850281296639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e292b8f85dcf7684fa2cd2a35a82a670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxValueToChance: 10
+  _maxChanceValue: 20
+  _cube: {fileID: 0}
