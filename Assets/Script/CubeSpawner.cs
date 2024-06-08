@@ -6,7 +6,6 @@ public class CubeSpawner : MonoBehaviour
     [SerializeField] private ClickHandler _clickHandler;
     [SerializeField] private ChanceCounter _chanceCounter;
     [SerializeField] private Cube _prefabCube;
-    [SerializeField] private Cubes _cubes;
     [SerializeField] private Explosion _explosion;
     [SerializeField] private Collider _spawnTerritory;
 
@@ -37,7 +36,7 @@ public class CubeSpawner : MonoBehaviour
     {
         for (int i = 0; i < _maxCountCubes; i++)
         {
-           _cubes.AddCube(SpawnCube(GetSpawtPosition()));
+            SpawnCube(GetSpawtPosition());
         }
     }
 
@@ -66,13 +65,12 @@ public class CubeSpawner : MonoBehaviour
                 cube.transform.localScale = cubesInScene.transform.localScale / _splitterCube;
                 cube.GetComponent<Renderer>().material = ChangeColor();
                 cube.SetCountSplit(tempValue);
-                _cubes.AddCube(cube);
             }
 
             _explosion.BlowingCube(transform.position, cubesInScene.CountSplit);
         }
 
-        _cubes.RemoveCobe(cubesInScene);
+        Destroy(cubesInScene.gameObject);
     }
 
     private Material ChangeColor()
